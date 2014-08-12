@@ -1,19 +1,45 @@
 package com.th3gam3rz.everythingpvp;
 
+import net.milkbowl.vault.economy.Economy;
+
+import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
+import org.bukkit.plugin.RegisteredServiceProvider;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import com.th3gam3rz.everythingpvp.events.PlayerHit;
+import com.th3gam3rz.everythingpvp.events.PlayerKill;
 import com.th3gam3rz.everythingpvp.managers.ChatManager;
 import com.th3gam3rz.everythingpvp.managers.SettingsManager;
 
 public class EverythingPvP extends JavaPlugin {
+	
+	public static Economy econ = null;
 
 	public void onEnable() {
 		SettingsManager.getInstance().setup(this);
 		new PlayerHit(this);
+		new PlayerKill(this);
+		if(!setupEconomy()){
+			SettingsManager.getInstance().getSettings().set("Economy", false);
+			Bukkit.getLogger().info("Disabled EverythingPvP's economy features due to no Vault dependency!");
+			return;
+		}
+		SettingsManager.getInstance().getSettings().set("Economy", true);
 	}
+	
+	private boolean setupEconomy() {
+        	if (getServer().getPluginManager().getPlugin("Vault") == null) {
+            		return false;
+        	}
+        	RegisteredServiceProvider<Economy> rsp = getServer().getServicesManager().getRegistration(Economy.class);
+        	if (rsp == null) {
+            		return false;
+        	}
+        	econ = rsp.getProvider();
+        	return econ != null;
+    	}
 
 	public boolean onCommand(CommandSender s, Command c, String l, String[] args) {
 		if(c.getName().equalsIgnoreCase("blood")){
