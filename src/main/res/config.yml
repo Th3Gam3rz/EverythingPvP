@@ -1,0 +1,7 @@
+# This is the settings file for EverythingPvP.
+# Do not edit any information under 'PlayerData'
+# The following colors for blood are supported:
+# Red, DarkRed, Blue, DarkBlue, Green, DarkGreen,
+# Multi (All of the above)
+
+BloodColor: Red
