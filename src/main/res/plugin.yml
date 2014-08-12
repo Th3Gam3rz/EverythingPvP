@@ -1,0 +1,15 @@
+name: EverythingPvP
+version: 1.0
+description: A PvP enchancement plugin!
+author: Th3Gam3rz
+main: com.th3gam3rz.everythingpvp.EverythingPvP
+permissions:
+  pvp.blood.see:
+    description: Allows the player to see blood.
+    default: true
+  pvp.blood.change:
+    description: Allows the player to change the blood color.
+    default: op
+commands:
+  blood:
+    description: Allows the player to change the blood color.
