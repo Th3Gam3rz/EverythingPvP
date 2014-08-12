@@ -3,6 +3,7 @@ package com.th3gam3rz.everythingpvp.managers;
 import java.io.File;
 
 import org.bukkit.configuration.file.FileConfiguration;
+import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.PluginDescriptionFile;
 
@@ -39,6 +40,10 @@ public class SettingsManager {
 		}catch(Exception e){
 			e.printStackTrace();
 		}
+	}
+	
+	public void reload(){
+		settings = YamlConfiguration.loadConfiguration(settingsFile);
 	}
 	
 	public PluginDescriptionFile getPluginInfo(){
