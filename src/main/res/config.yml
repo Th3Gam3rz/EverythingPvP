@@ -1,7 +1,17 @@
 # This is the settings file for EverythingPvP.
-# Do not edit any information under 'PlayerData'
+# --------------------------------------------------------
 # The following colors for blood are supported:
 # Red, DarkRed, Blue, DarkBlue, Green, DarkGreen,
 # Multi (All of the above)
-
+# --------------------------------------------------------
+# Change the Economy value to true or false, depending
+# on if you have Vault or not. Turning it to false will
+# disable all economy features in the plugin.
+# --------------------------------------------------------
+# When a player is killed by another player, this is the
+# percentage of his/her money that he/she will loose.
+# Only enter whole numbers ranging from 0 - 100, inclusive.
+# --------------------------------------------------------
 BloodColor: Red
+Economy: true
+PercentageDroppedOnDeath: 5
