@@ -1,6 +1,6 @@
 name: EverythingPvP
 version: 1.0
-description: A PvP enchancement plugin!
+description: A PvP enhancement plugin!
 author: Th3Gam3rz
 main: com.th3gam3rz.everythingpvp.EverythingPvP
 permissions:
