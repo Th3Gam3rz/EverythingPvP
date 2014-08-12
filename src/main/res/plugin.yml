@@ -13,6 +13,11 @@ permissions:
   pvp.playerdrop.exempt:
     description: The player will not loose any money on death.
     default: op
+  pvp.playerdrop:
+    description: Allows the player to change the percentage of money dropped on death.
+    default: op
 commands:
   blood:
     description: Changes the blood color!
+  playerdrop:
+    description: Changes the percentage dropped on death!
