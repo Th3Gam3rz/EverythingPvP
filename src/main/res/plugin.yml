@@ -12,4 +12,4 @@ permissions:
     default: op
 commands:
   blood:
-    description: Allows the player to change the blood color.
+    description: Changes the blood color!
