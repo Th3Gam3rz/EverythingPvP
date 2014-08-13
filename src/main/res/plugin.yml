@@ -2,6 +2,7 @@ name: EverythingPvP
 version: 1.0
 description: A PvP enhancement plugin!
 author: Th3Gam3rz
+softdepend: [Vault]
 main: com.th3gam3rz.everythingpvp.EverythingPvP
 permissions:
   pvp.blood.see:
