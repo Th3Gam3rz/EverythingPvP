@@ -1,14 +1,20 @@
 name: EverythingPvP
-version: 1.0.1
+version: 1.2
 description: A PvP enhancement plugin!
-author: Th3Gam3rz
+author: FeaturedEpic
 softdepend: [Vault]
-main: com.th3gam3rz.everythingpvp.EverythingPvP
+main: com.featuredepic.everythingpvp.EverythingPvP
 permissions:
   pvp.blood.see:
     description: Allows the player to see blood.
     default: true
+  pvp.blood.seebypass:
+    description: Bypasses the BloodVisible value in the settings file.
+    default: false
   pvp.blood.change:
+    description: Allows the player to toggle the visibility of blood.
+    default: op
+  pvp.bloodcolor.change:
     description: Allows the player to change the blood color.
     default: op
   pvp.playerdrop.exempt:
@@ -17,8 +23,15 @@ permissions:
   pvp.playerdrop:
     description: Allows the player to change the percentage of money dropped on death.
     default: op
+  pvp.pvp.server:
+    description: Allows the player to change the server-wide PvP status.
+    default: op
 commands:
   blood:
+    description: Change the visibility of blood!
+  bloodcolor:
     description: Changes the blood color!
   playerdrop:
     description: Changes the percentage dropped on death!
+  pvp:
+    description: Changes the PvP status of the server!
