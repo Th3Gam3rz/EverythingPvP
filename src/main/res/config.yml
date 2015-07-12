@@ -3,15 +3,45 @@
 # The following colors for blood are supported:
 # Red, DarkRed, Blue, DarkBlue, Green, DarkGreen,
 # Multi (All of the above)
+# 
+# Default is Red
+# --------------------------------------------------------
+# This determines whether or not players see blood. Having
+# the permission 'pvp.blood.seebypass' will bypass this
+# value so that the player always sees blood.
+#
+# Default is True
 # --------------------------------------------------------
 # Change the Economy value to true or false, depending
 # on if you have Vault or not. Turning it to false will
 # disable all economy features in the plugin.
+# 
+# Default is True
 # --------------------------------------------------------
 # When a player is killed by another player, this is the
 # percentage of his/her money that he/she will loose.
 # Only enter whole numbers ranging from 0 - 100, inclusive.
+# 
+# Default is 5
+# --------------------------------------------------------
+# When blood is shown, any players in this range of
+# blocks will see the blood. Increasing this number can
+# contribute to more lag. Settings this number to 0 will
+# make it so that only the attacker can see the blood.
+# 
+# Default is 5
+# --------------------------------------------------------
+# This is the value for the Server-Wide PvP. Setting this
+# to True will make is so that players can attack each
+# other, False will stop players from attacking each other.
+# For more information on this option, please visit the
+# wiki on the BukkitDev page.
+# 
+# Default is True
 # --------------------------------------------------------
 BloodColor: Red
+BloodVisible: true
 Economy: true
 PercentageDroppedOnDeath: 5
+BloodRange: 5
+ServerPvP: true
